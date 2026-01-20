@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Jasa otomasi absensi untuk PNS dan PPPK hanya 30rb/bulan. Solusi praktis dan terpercaya untuk kehadiran ASN. Hubungi kami di 08123456789">
+    <meta name="keywords"
+        content="jasa absensi PNS, absensi PPPK, otomasi absensi ASN, absensi otomatis, jasa absensi pegawai negeri">
+    <meta name="author" content="Represensi">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Represensi - Jasa Absensi PNS & PPPK Otomatis">
+    <meta property="og:description"
+        content="Solusi otomasi absensi untuk PNS dan PPPK hanya 30rb/bulan. Praktis, aman, dan terpercaya.">
+    <meta property="og:url" content="https://yourusername.github.io/represensi">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Represensi - Jasa Absensi PNS & PPPK">
+    <meta property="twitter:description" content="Jasa otomasi absensi untuk PNS dan PPPK hanya 30rb/bulan">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourusername.github.io/represensi">
+
+    <title>Represensi - Jasa Absensi PNS & PPPK Otomatis | Hanya 30rb/Bulan</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e40af;
+            --primary-dark: #1e3a8a;
+            --secondary: #3b82f6;
+            --accent: #10b981;
+            --dark: #1f2937;
+            --light: #f9fafb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 120px 2rem 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-100px);
+            }
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease 0.2s backwards;
+        }
+
+        .price-highlight {
+            display: inline-block;
+            background: var(--accent);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1rem 0 2rem;
+            animation: pulse 2s ease infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.4s backwards;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .features {
+            background: var(--light);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+        }
+
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .benefits {
+            background: white;
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--light);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateX(5px);
+        }
+
+        .check-icon {
+            color: var(--accent);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .pricing {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .pricing h2 {
+            color: white;
+        }
+
+        .pricing-card {
+            background: white;
+            color: var(--dark);
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .price {
+            font-size: 3rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .price-period {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .contact {
+            background: var(--light);
+            text-align: center;
+        }
+
+        .blog {
+            background: white;
+            padding: 4rem 2rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-card {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-image {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .blog-excerpt {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content {
+            display: none;
+            text-align: left;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #e5e7eb;
+        }
+
+        .blog-content.show {
+            display: block;
+        }
+
+        .blog-content h4 {
+            color: var(--primary);
+            margin: 1.5rem 0 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .blog-content h4:first-child {
+            margin-top: 0;
+        }
+
+        .blog-content p {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .read-more-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .read-more-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .contact {
+            background: var(--light);
+            text-align: center;
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            min-width: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .price-highlight {
+                font-size: 1.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                📋 Represensi
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Jasa Absensi Otomatis untuk PNS & PPPK</h1>
+                <p>Solusi praktis dan terpercaya untuk kehadiran ASN Anda. Tidak perlu repot lagi!</p>
+                <div class="price-highlight">
+                    💰 Hanya Rp 30.000/Bulan
+                </div>
+                <div class="cta-buttons">
+                    <a href="#kontak" class="btn btn-primary">Hubungi Sekarang</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="fitur" class="features">
+            <h2>Kenapa Memilih Represensi?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Otomatis & Praktis</h3>
+                    <p>Sistem absensi otomatis yang menghemat waktu dan tenaga Anda setiap hari</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Aman & Terpercaya</h3>
+                    <p>Data Anda dijamin aman dengan sistem keamanan yang terpercaya</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Harga Terjangkau</h3>
+                    <p>Biaya bulanan yang sangat terjangkau untuk semua kalangan ASN</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mudah Digunakan</h3>
+                    <p>Interface yang sederhana dan mudah dipahami untuk semua pengguna</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Akurat & Tepat Waktu</h3>
+                    <p>Sistem yang presisi memastikan absensi Anda selalu tercatat dengan benar</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Support 24/7</h3>
+                    <p>Tim support kami siap membantu Anda kapan saja</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h2>Manfaat yang Anda Dapatkan</h2>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <h4>Hemat Waktu</h4>
+                        <p>Tidak perlu khawatir lagi dengan absensi manual</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <h4>Tanpa Ribet</h4>
+                        <p>Sistem bekerja otomatis sesuai jadwal Anda</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <h4>Rekam Jejak Sempurna</h4>
+                        <p>Absensi Anda selalu tercatat dengan rapi</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <h4>Fokus Kerja Lebih Baik</h4>
+                        <p>Konsentrasi penuh pada tugas utama Anda</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing">
+            <h2>Paket Harga Spesial</h2>
+            <div class="pricing-card">
+                <h3>Paket Bulanan</h3>
+                <div class="price">Rp 30.000</div>
+                <div class="price-period">/bulan</div>
+                <ul style="list-style: none; margin: 2rem 0; line-height: 2;">
+                    <li>✓ Absensi Otomatis Setiap Hari</li>
+                    <li>✓ Sistem Keamanan Terjamin</li>
+                    <li>✓ Support Cepat via WA</li>
+                    <li>✓ Update Sistem Gratis</li>
+                    <li>✓ Laporan Bulanan</li>
+                </ul>
+                <a href="#kontak" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Daftar
+                    Sekarang</a>
+            </div>
+        </section>
+
+        <section class="blog">
+            <h2>Artikel & Tips untuk ASN</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">📱</div>
+                    <h3>5 Alasan PNS Memerlukan Sistem Absensi Otomatis</h3>
+                    <p class="blog-excerpt">Di era digital ini, absensi manual sudah tidak efisien lagi. Sistem otomatis
+                        membantu ASN fokus pada tugas utama tanpa khawatir terlambat absen...</p>
+                    <div class="blog-content">
+                        <h4>1. Menghemat Waktu Berharga</h4>
+                        <p>Sebagai PNS atau PPPK, waktu Anda sangat berharga. Dengan sistem absensi otomatis, Anda tidak
+                            perlu lagi khawatir terlambat atau lupa absen. Sistem bekerja secara otomatis sesuai jadwal
+                            yang telah ditentukan.</p>
+
+                        <h4>2. Menghindari Sanksi Administrasi</h4>
+                        <p>Keterlambatan atau kelupaan absen dapat berakibat pada pemotongan tunjangan. Sistem otomatis
+                            memastikan absensi Anda selalu tercatat tepat waktu, sehingga terhindar dari sanksi
+                            administratif.</p>
+
+                        <h4>3. Rekam Jejak Sempurna</h4>
+                        <p>Dengan absensi yang selalu tercatat rapi, Anda memiliki track record kehadiran yang baik. Ini
+                            sangat penting untuk penilaian kinerja dan kenaikan pangkat.</p>
+
+                        <h4>4. Fokus pada Pelayanan Publik</h4>
+                        <p>Tanpa beban pikiran tentang absensi, Anda bisa lebih fokus memberikan pelayanan terbaik
+                            kepada masyarakat sesuai tugas dan fungsi jabatan Anda.</p>
+
+                        <h4>5. Biaya Terjangkau</h4>
+                        <p>Dengan hanya Rp 30.000 per bulan, investasi ini jauh lebih murah dibanding risiko pemotongan
+                            tunjangan atau sanksi lainnya akibat masalah absensi.</p>
+                    </div>
+                    <button class="read-more-btn" onclick="toggleBlogContent(this)">Baca Selengkapnya</button>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">⚡</div>
+                    <h3>Cara Kerja Sistem Absensi Otomatis Represensi</h3>
+                    <p class="blog-excerpt">Penasaran bagaimana sistem kami bekerja? Simak penjelasan lengkap tentang
+                        teknologi di balik layanan absensi otomatis Represensi...</p>
+                    <div class="blog-content">
+                        <h4>Sistem yang Aman dan Terpercaya</h4>
+                        <p>Represensi menggunakan teknologi otomasi yang telah teruji untuk memastikan absensi Anda
+                            tercatat dengan akurat setiap harinya. Sistem kami bekerja 24/7 tanpa perlu intervensi
+                            manual.</p>
+
+                        <h4>Proses Mudah dan Praktis</h4>
+                        <p>Cukup daftar sekali, berikan akses yang diperlukan, dan sistem akan bekerja otomatis sesuai
+                            jadwal kerja Anda. Tidak perlu repot mengatur ulang setiap hari.</p>
+
+                        <h4>Keamanan Data Terjamin</h4>
+                        <p>Kami sangat serius dalam menjaga keamanan data pribadi Anda. Semua informasi dienkripsi dan
+                            hanya digunakan untuk keperluan absensi sesuai kesepakatan.</p>
+
+                        <h4>Monitoring Real-time</h4>
+                        <p>Anda bisa memantau status absensi Anda kapan saja. Jika ada kendala, tim support kami siap
+                            membantu melalui WhatsApp.</p>
+
+                        <h4>Update dan Maintenance Gratis</h4>
+                        <p>Sistem kami terus diupdate mengikuti perkembangan aplikasi absensi instansi. Semua update dan
+                            maintenance sudah termasuk dalam biaya bulanan.</p>
+                    </div>
+                    <button class="read-more-btn" onclick="toggleBlogContent(this)">Baca Selengkapnya</button>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">💡</div>
+                    <h3>Tips Memaksimalkan Kinerja sebagai ASN Modern</h3>
+                    <p class="blog-excerpt">Menjadi ASN di era digital membutuhkan efisiensi dan produktivitas tinggi.
+                        Berikut tips untuk meningkatkan kinerja Anda...</p>
+                    <div class="blog-content">
+                        <h4>1. Manfaatkan Teknologi Digital</h4>
+                        <p>Otomasi tugas-tugas administratif seperti absensi memungkinkan Anda fokus pada pekerjaan yang
+                            lebih substantif dan memberikan dampak nyata.</p>
+
+                        <h4>2. Manajemen Waktu yang Efektif</h4>
+                        <p>Dengan tidak perlu memikirkan hal-hal teknis seperti absensi, Anda bisa mengalokasikan waktu
+                            dan energi untuk pekerjaan yang lebih penting.</p>
+
+                        <h4>3. Jaga Work-Life Balance</h4>
+                        <p>Sistem otomatis memberi Anda ketenangan pikiran sehingga bisa lebih menikmati waktu bersama
+                            keluarga tanpa khawatir urusan kantor.</p>
+
+                        <h4>4. Terus Belajar dan Berkembang</h4>
+                        <p>Gunakan waktu yang Anda hemat untuk mengikuti pelatihan, webinar, atau kursus yang dapat
+                            meningkatkan kompetensi profesional Anda.</p>
+
+                        <h4>5. Bangun Networking</h4>
+                        <p>Dengan pikiran yang lebih tenang, Anda bisa lebih fokus membangun relasi profesional yang
+                            bermanfaat untuk pengembangan karir.</p>
+                    </div>
+                    <button class="read-more-btn" onclick="toggleBlogContent(this)">Baca Selengkapnya</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="kontak" class="contact">
+            <h2>Hubungi Kami</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem; color: #666;">
+                Siap membantu Anda 24/7. Jangan ragu untuk menghubungi kami melalui WhatsApp, Instagram, atau TikTok
+            </p>
+            <h3>Kami Tidak Bisa Dihubungi (Tidak Memberikan Kontak WA) Melalui WhatsApp Demi Keamanan Konsumen Kami
+                Semua</h3>
+            <div class="contact-methods">
+                <!-- <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>WhatsApp</h3>
+                    <a href="https://wa.me/6281234567890">08123456789</a>
+                    <p style="margin-top: 0.5rem; color: #666;">Chat langsung dengan kami</p>
+                </div> -->
+                <div class="contact-card">
+                    <div class="contact-icon">📷</div>
+                    <h3>Instagram</h3>
+                    <a href="https://instagram.com/represensi" target="_blank">@represensi</a>
+                    <p style="margin-top: 0.5rem; color: #666;">Follow untuk update terbaru</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">🎵</div>
+                    <h3>TikTok</h3>
+                    <a href="https://tiktok.com/@represensi" target="_blank">@represensi</a>
+                    <p style="margin-top: 0.5rem; color: #666;">Lihat konten menarik kami</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Represensi. Jasa Absensi PNS & PPPK Terpercaya.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Solusi Otomasi Absensi untuk Aparatur Sipil
+            Negara</p>
+    </footer>
+
+    <a href="#kontak" class="whatsapp-float" aria-label="Hubungi via WhatsApp">
+        💬
+    </a>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Represensi",
+        "description": "Jasa otomasi absensi untuk PNS dan PPPK",
+        "url": "https://devirokrat.github.io/represensi",
+        "telephone": "+628112344563",
+        "priceRange": "Rp 30.000",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kediri",
+            "addressRegion": "Jawa Timur",
+            "addressCountry": "ID"
+        },
+        "sameAs": [
+            "https://instagram.com/represensi",
+            "https://tiktok.com/@represensi"
+        ]
+    }
+    </script>
+</body>
+
+</html>
