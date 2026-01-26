@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jasa otomasi absensi untuk PNS dan PPPK hanya 50rb/bulan. Solusi praktis dan terpercaya untuk kehadiran ASN. Hubungi kami di 08123456789">
-    <meta name="keywords" content="jasa absensi PNS, absensi PPPK, otomasi absensi ASN, absensi otomatis, jasa absensi pegawai negeri">
+    <meta name="description"
+        content="Jasa otomasi absensi untuk PNS dan PPPK hanya 50rb/bulan. Solusi praktis dan terpercaya untuk kehadiran ASN. Hubungi kami di 08123456789">
+    <meta name="keywords"
+        content="jasa absensi PNS, absensi PPPK, otomasi absensi ASN, absensi otomatis, jasa absensi pegawai negeri">
     <meta name="author" content="Represensi">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Represensi - Jasa Absensi PNS & PPPK Otomatis">
-    <meta property="og:description" content="Solusi otomasi absensi untuk PNS dan PPPK hanya 50rb/bulan. Praktis, aman, dan terpercaya.">
+    <meta property="og:description"
+        content="Solusi otomasi absensi untuk PNS dan PPPK hanya 50rb/bulan. Praktis, aman, dan terpercaya.">
     <meta property="og:url" content="https://yourusername.github.io/represensi">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Represensi - Jasa Absensi PNS & PPPK">
     <meta property="twitter:description" content="Jasa otomasi absensi untuk PNS dan PPPK hanya 50rb/bulan">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://yourusername.github.io/represensi">
-    
+
     <title>Represensi - Jasa Absensi PNS & PPPK Otomatis | Hanya 50rb/Bulan</title>
-    
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         :root {
             --primary: #1e40af;
             --primary-dark: #1e3a8a;
@@ -39,14 +43,14 @@
             --dark: #1f2937;
             --light: #f9fafb;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: var(--dark);
             overflow-x: hidden;
         }
-        
+
         header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
@@ -55,9 +59,9 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         nav {
             max-width: 1200px;
             margin: 0 auto;
@@ -66,7 +70,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
@@ -74,24 +78,24 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .nav-links {
             display: flex;
             gap: 2rem;
             list-style: none;
         }
-        
+
         .nav-links a {
             color: white;
             text-decoration: none;
             font-weight: 500;
             transition: opacity 0.3s;
         }
-        
+
         .nav-links a:hover {
             opacity: 0.8;
         }
-        
+
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
@@ -100,7 +104,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero::before {
             content: '';
             position: absolute;
@@ -111,43 +115,49 @@
             background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
             animation: float 20s linear infinite;
         }
-        
+
         @keyframes float {
-            from { transform: translateY(0); }
-            to { transform: translateY(-100px); }
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-100px);
+            }
         }
-        
+
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
         }
-        
+
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             animation: fadeInUp 0.8s ease;
         }
-        
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         .hero p {
             font-size: 1.25rem;
             margin-bottom: 2rem;
             opacity: 0.95;
             animation: fadeInUp 0.8s ease 0.2s backwards;
         }
-        
+
         .price-highlight {
             display: inline-block;
             background: var(--accent);
@@ -158,12 +168,19 @@
             margin: 1rem 0 2rem;
             animation: pulse 2s ease infinite;
         }
-        
+
         @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
         }
-        
+
         .cta-buttons {
             display: flex;
             gap: 1rem;
@@ -171,7 +188,7 @@
             flex-wrap: wrap;
             animation: fadeInUp 0.8s ease 0.4s backwards;
         }
-        
+
         .btn {
             display: inline-block;
             padding: 1rem 2rem;
@@ -183,66 +200,66 @@
             border: none;
             font-size: 1rem;
         }
-        
+
         .btn-primary {
             background: white;
             color: var(--primary);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
-        
+
         .btn-secondary {
             background: transparent;
             color: white;
             border: 2px solid white;
         }
-        
+
         .btn-secondary:hover {
             background: white;
             color: var(--primary);
         }
-        
+
         section {
             padding: 4rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         h2 {
             text-align: center;
             font-size: 2rem;
             margin-bottom: 3rem;
             color: var(--primary);
         }
-        
+
         .features {
             background: var(--light);
         }
-        
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
-        
+
         .feature-card {
             background: white;
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
         }
-        
+
         .feature-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
-        
+
         .feature-icon {
             width: 60px;
             height: 60px;
@@ -254,16 +271,16 @@
             margin: 0 auto 1rem;
             font-size: 1.5rem;
         }
-        
+
         .feature-card h3 {
             color: var(--primary);
             margin-bottom: 0.5rem;
         }
-        
+
         .benefits {
             background: white;
         }
-        
+
         .benefits-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -271,7 +288,7 @@
             max-width: 900px;
             margin: 0 auto;
         }
-        
+
         .benefit-item {
             display: flex;
             align-items: flex-start;
@@ -281,27 +298,27 @@
             border-radius: 10px;
             transition: transform 0.3s ease;
         }
-        
+
         .benefit-item:hover {
             transform: translateX(5px);
         }
-        
+
         .check-icon {
             color: var(--accent);
             font-size: 1.5rem;
             flex-shrink: 0;
         }
-        
+
         .pricing {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
             text-align: center;
         }
-        
+
         .pricing h2 {
             color: white;
         }
-        
+
         .pricing-card {
             background: white;
             color: var(--dark);
@@ -309,16 +326,16 @@
             margin: 0 auto;
             padding: 3rem 2rem;
             border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
         }
-        
+
         .price {
             font-size: 3rem;
             color: var(--primary);
             font-weight: bold;
             margin: 1rem 0;
         }
-        
+
         .price-period {
             font-size: 1.2rem;
             color: #666;
@@ -338,13 +355,13 @@
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .blog-preview-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
         .blog-preview-image {
@@ -384,12 +401,12 @@
         .blog-preview-card a:hover {
             gap: 0.75rem;
         }
-        
+
         .contact {
             background: white;
             text-align: center;
         }
-        
+
         .contact-methods {
             display: flex;
             justify-content: center;
@@ -397,39 +414,39 @@
             flex-wrap: wrap;
             margin-top: 2rem;
         }
-        
+
         .contact-card {
             background: var(--light);
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             min-width: 250px;
             transition: transform 0.3s ease;
         }
-        
+
         .contact-card:hover {
             transform: scale(1.05);
         }
-        
+
         .contact-icon {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
-        
+
         .contact-card a {
             color: var(--primary);
             text-decoration: none;
             font-weight: 600;
             font-size: 1.1rem;
         }
-        
+
         footer {
             background: var(--dark);
             color: white;
             text-align: center;
             padding: 2rem;
         }
-        
+
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -443,17 +460,17 @@
             align-items: center;
             justify-content: center;
             font-size: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             cursor: pointer;
             transition: transform 0.3s ease;
             z-index: 1000;
             text-decoration: none;
         }
-        
+
         .whatsapp-float:hover {
             transform: scale(1.1);
         }
-        
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -462,25 +479,26 @@
             h1 {
                 font-size: 2rem;
             }
-            
+
             .hero p {
                 font-size: 1.1rem;
             }
-            
+
             .price-highlight {
                 font-size: 1.2rem;
             }
-            
+
             .cta-buttons {
                 flex-direction: column;
             }
-            
+
             .btn {
                 width: 100%;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -618,7 +636,8 @@
                 <div class="price-period" id="pricing-period"></div>
                 <ul id="pricing-features" style="list-style: none; margin: 2rem 0; line-height: 2;">
                 </ul>
-                <a href="#" id="pricing-cta-btn" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;"></a>
+                <a href="#" id="pricing-cta-btn" class="btn btn-primary"
+                    style="margin-top: 1rem; display: inline-block;"></a>
             </div>
         </section>
 
@@ -626,12 +645,12 @@
             <h2>Hubungi Kami</h2>
             <p id="contact-desc" style="max-width: 600px; margin: 0 auto 2rem; color: #666;"></p>
             <div class="contact-methods">
-                <!-- <div class="contact-card">
-                    <div class="contact-icon">📱</div>
-                    <h3>WhatsApp</h3>
-                    <a href="#" id="contact-wa"></a>
-                    <p style="margin-top: 0.5rem; color: #666;">Chat langsung dengan kami</p>
-                </div> -->
+                <div class="contact-card">
+                    <div class="contact-icon">🛒</div>
+                    <h3>Shopee</h3>
+                    <a href="#" id="contact-shopee"></a>
+                    <p style="margin-top: 0.5rem; color: #666;">Beli langsung melalui SHOPEE</p>
+                </div>
                 <div class="contact-card">
                     <div class="contact-icon">📷</div>
                     <h3>Instagram</h3>
@@ -665,10 +684,10 @@
             // Informasi Brand
             brandName: 'Represensi',
             brandIcon: '📋',
-            
+
             // Harga
             hargaBulanan: 50000, // dalam rupiah
-            
+
             // Kontak
             whatsapp: '6281234567890',
             whatsappDisplay: '08123456789',
@@ -676,23 +695,23 @@
             instagramUrl: 'https://instagram.com/represensi',
             tiktok: '@represensi',
             tiktokUrl: 'https://tiktok.com/@represensi',
-            
+
             // Konten Hero
             heroTitle: 'Jasa Absensi Otomatis untuk PNS & PPPK',
             heroSubtitle: 'Solusi praktis dan terpercaya untuk kehadiran ASN Anda. Tidak perlu repot lagi!',
             heroCTA: 'Hubungi Sekarang',
-            
+
             // Contact Section
             contactDesc: 'Siap membantu Anda 24/7. Jangan ragu untuk menghubungi kami melalui Instagram atau TikTok',
-            
+
             // Tagline
             taglineFooter: 'Jasa Absensi PNS & PPPK Terpercaya.',
             taglineSubFooter: 'Solusi Otomasi Absensi untuk Aparatur Sipil Negara',
-            
+
             // Meta SEO
             metaDescription: 'Jasa otomasi absensi untuk PNS dan PPPK hanya {harga}/bulan. Solusi praktis dan terpercaya untuk kehadiran ASN. Hubungi kami di {wa}',
             metaKeywords: 'jasa absensi PNS, absensi PPPK, otomasi absensi ASN, absensi otomatis, jasa absensi pegawai negari',
-            
+
             // Pricing Card
             pricingTitle: 'Paket Bulanan',
             pricingPeriod: '/bulan',
@@ -704,16 +723,16 @@
                 'Laporan Bulanan'
             ],
             pricingCTA: 'Daftar Sekarang',
-            
+
             // WhatsApp Message
             waMessage: 'Halo Represensi, saya tertarik dengan jasa absensi otomatis'
         };
-        
+
         // Fungsi format rupiah
         function formatRupiah(angka) {
             return 'Rp ' + angka.toLocaleString('id-ID');
         }
-        
+
         // Fungsi untuk replace placeholder
         function replacePlaceholders(text) {
             return text
@@ -721,23 +740,23 @@
                 .replace('{wa}', CONFIG.whatsappDisplay)
                 .replace('{brand}', CONFIG.brandName);
         }
-        
+
         // Update semua elemen saat halaman dimuat
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const hargaFormatted = formatRupiah(CONFIG.hargaBulanan);
             const waUrl = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(CONFIG.waMessage)}`;
-            
+
             // Update brand name & icon
             document.querySelectorAll('.logo').forEach(el => {
                 el.innerHTML = CONFIG.brandIcon + ' ' + CONFIG.brandName;
             });
-            
+
             // Update hero section
             document.getElementById('hero-title').textContent = CONFIG.heroTitle;
             document.getElementById('hero-subtitle').textContent = CONFIG.heroSubtitle;
             document.getElementById('price-highlight').innerHTML = '💰 Hanya ' + hargaFormatted + '/Bulan';
             document.getElementById('hero-cta').textContent = CONFIG.heroCTA;
-            
+
             // Update pricing section
             document.getElementById('pricing-title').textContent = CONFIG.pricingTitle;
             document.getElementById('pricing-price').textContent = hargaFormatted;
@@ -747,7 +766,7 @@
                 .join('');
             document.getElementById('pricing-cta-btn').textContent = CONFIG.pricingCTA;
             document.getElementById('pricing-cta-btn').href = waUrl;
-            
+
             // Update contact section
             document.getElementById('contact-desc').textContent = CONFIG.contactDesc;
             document.getElementById('contact-wa').textContent = CONFIG.whatsappDisplay;
@@ -756,34 +775,34 @@
             document.getElementById('contact-ig').href = CONFIG.instagramUrl;
             document.getElementById('contact-tiktok').textContent = CONFIG.tiktok;
             document.getElementById('contact-tiktok').href = CONFIG.tiktokUrl;
-            
+
             // Update footer
             document.getElementById('footer-main').innerHTML = `&copy; 2025 ${CONFIG.brandName}. ${CONFIG.taglineFooter}`;
             document.getElementById('footer-sub').textContent = CONFIG.taglineSubFooter;
-            
+
             // Update floating WhatsApp button
             document.getElementById('wa-float').href = waUrl;
-            
+
             // Update meta tags
             const metaDesc = document.querySelector('meta[name="description"]');
             if (metaDesc) {
                 metaDesc.content = replacePlaceholders(CONFIG.metaDescription);
             }
-            
+
             const metaKeywords = document.querySelector('meta[name="keywords"]');
             if (metaKeywords) {
                 metaKeywords.content = CONFIG.metaKeywords;
             }
-            
+
             // Update title
             document.title = `${CONFIG.brandName} - ${CONFIG.heroTitle} | Hanya ${hargaFormatted}/Bulan`;
-            
+
             // Update Open Graph
             const ogTitle = document.querySelector('meta[property="og:title"]');
             if (ogTitle) {
                 ogTitle.content = `${CONFIG.brandName} - ${CONFIG.heroTitle}`;
             }
-            
+
             const ogDesc = document.querySelector('meta[property="og:description"]');
             if (ogDesc) {
                 ogDesc.content = replacePlaceholders(CONFIG.metaDescription);
@@ -829,4 +848,5 @@
         });
     </script>
 </body>
+
 </html>
