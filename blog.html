@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Artikel dan tips seputar absensi PNS, PPPK, dan ASN. Panduan lengkap untuk pegawai negeri modern.">
+    <meta name="keywords" content="tips PNS, artikel PPPK, panduan ASN, absensi otomatis, produktivitas pegawai negeri">
+    <title>Blog - Tips & Artikel untuk ASN | Represensi</title>
+    <link rel="canonical" href="https://yourusername.github.io/represensi/blog.html">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #1e40af;
+            --primary-dark: #1e3a8a;
+            --secondary: #3b82f6;
+            --accent: #10b981;
+            --dark: #1f2937;
+            --light: #f9fafb;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 120px 2rem 60px;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .blog-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .blog-image {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .blog-date {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-card h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            line-height: 1.3;
+        }
+        
+        .blog-excerpt {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .blog-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tag {
+            background: var(--light);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .read-more {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+        
+        .read-more:hover {
+            gap: 0.75rem;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">📋 Represensi</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>Blog & Artikel</h1>
+        <p>Tips, panduan, dan informasi terkini seputar absensi dan produktivitas ASN</p>
+    </div>
+
+    <div class="blog-container">
+        <div class="blog-grid">
+            <!-- Artikel 1 -->
+            <article class="blog-card">
+                <div class="blog-image">📱</div>
+                <div class="blog-content">
+                    <div class="blog-date">20 Januari 2025</div>
+                    <h2>5 Alasan PNS Memerlukan Sistem Absensi Otomatis</h2>
+                    <div class="blog-tags">
+                        <span class="tag">Tips PNS</span>
+                        <span class="tag">Produktivitas</span>
+                    </div>
+                    <p class="blog-excerpt">Di era digital ini, absensi manual sudah tidak efisien lagi. Sistem otomatis membantu ASN fokus pada tugas utama tanpa khawatir terlambat absen. Simak 5 alasan mengapa PNS modern memerlukan solusi ini...</p>
+                    <a href="blog/alasan-pns-butuh-absensi-otomatis.html" class="read-more">Baca Selengkapnya →</a>
+                </div>
+            </article>
+
+            <!-- Artikel 2 -->
+            <article class="blog-card">
+                <div class="blog-image">⚡</div>
+                <div class="blog-content">
+                    <div class="blog-date">18 Januari 2025</div>
+                    <h2>Cara Kerja Sistem Absensi Otomatis Represensi</h2>
+                    <div class="blog-tags">
+                        <span class="tag">Teknologi</span>
+                        <span class="tag">Tutorial</span>
+                    </div>
+                    <p class="blog-excerpt">Penasaran bagaimana sistem kami bekerja? Artikel ini menjelaskan secara lengkap tentang teknologi di balik layanan absensi otomatis Represensi, mulai dari keamanan data hingga proses otomasi yang kami gunakan...</p>
+                    <a href="blog/cara-kerja-sistem-represensi.html" class="read-more">Baca Selengkapnya →</a>
+                </div>
+            </article>
+
+            <!-- Artikel 3 -->
+            <article class="blog-card">
+                <div class="blog-image">💡</div>
+                <div class="blog-content">
+                    <div class="blog-date">15 Januari 2025</div>
+                    <h2>Tips Memaksimalkan Kinerja sebagai ASN Modern</h2>
+                    <div class="blog-tags">
+                        <span class="tag">Karir ASN</span>
+                        <span class="tag">Produktivitas</span>
+                    </div>
+                    <p class="blog-excerpt">Menjadi ASN di era digital membutuhkan efisiensi dan produktivitas tinggi. Pelajari strategi dan tips untuk meningkatkan kinerja Anda sebagai pegawai negeri yang modern dan efektif...</p>
+                    <a href="blog/tips-asn-modern.html" class="read-more">Baca Selengkapnya →</a>
+                </div>
+            </article>
+
+            <!-- Artikel 4 -->
+            <article class="blog-card">
+                <div class="blog-image">🔒</div>
+                <div class="blog-content">
+                    <div class="blog-date">12 Januari 2025</div>
+                    <h2>Keamanan Data Absensi: Hal yang Perlu Anda Ketahui</h2>
+                    <div class="blog-tags">
+                        <span class="tag">Keamanan</span>
+                        <span class="tag">Privacy</span>
+                    </div>
+                    <p class="blog-excerpt">Keamanan data adalah prioritas utama dalam sistem absensi digital. Pelajari bagaimana kami melindungi informasi pribadi Anda dan apa yang harus Anda perhatikan saat memilih layanan absensi otomatis...</p>
+                    <a href="blog/keamanan-data-absensi.html" class="read-more">Baca Selengkapnya →</a>
+                </div>
+            </article>
+
+            <!-- Artikel 5 -->
+            <article class="blog-card">
+                <div class="blog-image">📊</div>
+                <div class="blog-content">
+                    <div class="blog-date">10 Januari 2025</div>
+                    <h2>Dampak Absensi Terhadap Karir PNS dan PPPK</h2>
+                    <div class="blog-tags">
+                        <span class="tag">Karir</span>
+                        <span class="tag">Regulasi</span>
+                    </div>
+                    <p class="blog-excerpt">Rekam jejak absensi yang baik sangat penting untuk penilaian kinerja dan kenaikan pangkat ASN. Artikel ini membahas bagaimana kehadiran mempengaruhi karir Anda dan tips menjaga track record yang sempurna...</p>
+                    <a href="blog/dampak-absensi-karir-asn.html" class="read-more">Baca Selengkapnya →</a>
+                </div>
+            </article>
+
+            <!-- Artikel 6 -->
+            <article class="blog-card">
+                <div class="blog-image">⏰</div>
+                <div class="blog-content">
+                    <div class="blog-date">8 Januari 2025</div>
+                    <h2>Manajemen Waktu Efektif untuk Pegawai Negeri</h2>
+                    <div class="blog-tags">
+                        <span class="tag">Time Management</span>
+                        <span class="tag">Produktivitas</span>
+                    </div>
+                    <p class="blog-excerpt">Waktu adalah aset berharga bagi ASN. Dengan manajemen waktu yang baik, Anda bisa menyelesaikan lebih banyak pekerjaan dan tetap memiliki work-life balance. Pelajari teknik-teknik efektif di sini...</p>
+                    <a href="blog/manajemen-waktu-asn.html" class="read-more">Baca Selengkapnya →</a>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Represensi. Jasa Absensi PNS & PPPK Terpercaya.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Solusi Otomasi Absensi untuk Aparatur Sipil Negara</p>
+    </footer>
+</body>
+</html>
