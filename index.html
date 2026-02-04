@@ -645,22 +645,22 @@
             <h2>Hubungi Kami</h2>
             <p id="contact-desc" style="max-width: 600px; margin: 0 auto 2rem; color: #666;"></p>
             <div class="contact-methods">
-                <div class="contact-card">
+                <div class="contact-card" data-config="shopeeUrl">
                     <div class="contact-icon">🛒</div>
                     <h3>Shopee</h3>
-                    <a href="#" id="contact-shopee"></a>
+                    <a id="contact-shopee" data-config="shopeeUrl" target="_blank" rel="noopener"></a>
                     <p style="margin-top: 0.5rem; color: #666;">Beli langsung melalui SHOPEE</p>
                 </div>
-                <div class="contact-card">
+                <div class="contact-card" data-config="instagramUrl">
                     <div class="contact-icon">📷</div>
                     <h3>Instagram</h3>
-                    <a href="#" id="contact-ig" target="_blank"></a>
+                    <a id="contact-ig" data-config="instagramUrl" target="_blank" rel="noopener"></a>
                     <p style="margin-top: 0.5rem; color: #666;">Follow untuk update terbaru</p>
                 </div>
-                <div class="contact-card">
+                <div class="contact-card" data-config="tiktokUrl">
                     <div class="contact-icon">🎵</div>
                     <h3>TikTok</h3>
-                    <a href="#" id="contact-tiktok" target="_blank"></a>
+                    <a id="contact-tiktok" data-config="tiktokUrl" target="_blank" rel="noopener"></a>
                     <p style="margin-top: 0.5rem; color: #666;">Lihat konten menarik kami</p>
                 </div>
             </div>
@@ -695,6 +695,9 @@
             instagramUrl: 'https://instagram.com/represensi',
             tiktok: '@represensi',
             tiktokUrl: 'https://tiktok.com/@represensi',
+            // Shopee (opsional)
+            shopeeUrl: 'https://s.shopee.co.id/9pYagoTEaQ',
+            shopeeText: 'Buka Shopee',
 
             // Konten Hero
             heroTitle: 'Jasa Absensi Otomatis untuk PNS & PPPK',
@@ -752,36 +755,89 @@
             });
 
             // Update hero section
-            document.getElementById('hero-title').textContent = CONFIG.heroTitle;
-            document.getElementById('hero-subtitle').textContent = CONFIG.heroSubtitle;
-            document.getElementById('price-highlight').innerHTML = '💰 Hanya ' + hargaFormatted + '/Bulan';
-            document.getElementById('hero-cta').textContent = CONFIG.heroCTA;
+            const heroTitleEl = document.getElementById('hero-title');
+            if (heroTitleEl) heroTitleEl.textContent = CONFIG.heroTitle;
+            const heroSubtitleEl = document.getElementById('hero-subtitle');
+            if (heroSubtitleEl) heroSubtitleEl.textContent = CONFIG.heroSubtitle;
+            const priceHighlightEl = document.getElementById('price-highlight');
+            if (priceHighlightEl) priceHighlightEl.innerHTML = '💰 Hanya ' + hargaFormatted + '/Bulan';
+            const heroCtaEl = document.getElementById('hero-cta');
+            if (heroCtaEl) {
+                heroCtaEl.textContent = CONFIG.heroCTA;
+                heroCtaEl.href = waUrl;
+            }
 
             // Update pricing section
-            document.getElementById('pricing-title').textContent = CONFIG.pricingTitle;
-            document.getElementById('pricing-price').textContent = hargaFormatted;
-            document.getElementById('pricing-period').textContent = CONFIG.pricingPeriod;
-            document.getElementById('pricing-features').innerHTML = CONFIG.pricingFeatures
-                .map(feature => `<li>✓ ${feature}</li>`)
-                .join('');
-            document.getElementById('pricing-cta-btn').textContent = CONFIG.pricingCTA;
-            document.getElementById('pricing-cta-btn').href = waUrl;
+            const pricingTitleEl = document.getElementById('pricing-title');
+            if (pricingTitleEl) pricingTitleEl.textContent = CONFIG.pricingTitle;
+            const pricingPriceEl = document.getElementById('pricing-price');
+            if (pricingPriceEl) pricingPriceEl.textContent = hargaFormatted;
+            const pricingPeriodEl = document.getElementById('pricing-period');
+            if (pricingPeriodEl) pricingPeriodEl.textContent = CONFIG.pricingPeriod;
+            const pricingFeaturesEl = document.getElementById('pricing-features');
+            if (pricingFeaturesEl) {
+                pricingFeaturesEl.innerHTML = CONFIG.pricingFeatures
+                    .map(feature => `<li>✓ ${feature}</li>`)
+                    .join('');
+            }
+            const pricingBtnEl = document.getElementById('pricing-cta-btn');
+            if (pricingBtnEl) {
+                pricingBtnEl.textContent = CONFIG.pricingCTA;
+                pricingBtnEl.href = waUrl;
+            }
 
-            // Update contact section
-            document.getElementById('contact-desc').textContent = CONFIG.contactDesc;
-            document.getElementById('contact-wa').textContent = CONFIG.whatsappDisplay;
-            document.getElementById('contact-wa').href = waUrl;
-            document.getElementById('contact-ig').textContent = CONFIG.instagram;
-            document.getElementById('contact-ig').href = CONFIG.instagramUrl;
-            document.getElementById('contact-tiktok').textContent = CONFIG.tiktok;
-            document.getElementById('contact-tiktok').href = CONFIG.tiktokUrl;
+            // Update contact section (safe checks)
+            const contactDescEl = document.getElementById('contact-desc');
+            if (contactDescEl) contactDescEl.textContent = CONFIG.contactDesc;
+
+            const contactShopeeEl = document.getElementById('contact-shopee');
+            if (contactShopeeEl) {
+                contactShopeeEl.textContent = CONFIG.shopeeText || 'Shopee';
+                contactShopeeEl.href = CONFIG.shopeeUrl || '#';
+            }
+
+            const contactIgEl = document.getElementById('contact-ig');
+            if (contactIgEl) {
+                contactIgEl.textContent = CONFIG.instagram;
+                contactIgEl.href = CONFIG.instagramUrl;
+            }
+
+            const contactTiktokEl = document.getElementById('contact-tiktok');
+            if (contactTiktokEl) {
+                contactTiktokEl.textContent = CONFIG.tiktok;
+                contactTiktokEl.href = CONFIG.tiktokUrl;
+            }
 
             // Update footer
-            document.getElementById('footer-main').innerHTML = `&copy; 2025 ${CONFIG.brandName}. ${CONFIG.taglineFooter}`;
-            document.getElementById('footer-sub').textContent = CONFIG.taglineSubFooter;
+            const footerMainEl = document.getElementById('footer-main');
+            if (footerMainEl) footerMainEl.innerHTML = `&copy; 2025 ${CONFIG.brandName}. ${CONFIG.taglineFooter}`;
+            const footerSubEl = document.getElementById('footer-sub');
+            if (footerSubEl) footerSubEl.textContent = CONFIG.taglineSubFooter;
 
             // Update floating WhatsApp button
-            document.getElementById('wa-float').href = waUrl;
+            const waFloatEl = document.getElementById('wa-float');
+            if (waFloatEl) waFloatEl.href = waUrl;
+
+            // Make entire contact-card clickable based on its `data-config` key
+            document.querySelectorAll('.contact-card[data-config]').forEach(card => {
+                const key = card.dataset.config;
+                const url = CONFIG[key];
+                if (!url) return;
+                card.style.cursor = 'pointer';
+                card.setAttribute('role', 'link');
+                card.setAttribute('tabindex', '0');
+                const openUrl = () => window.open(url, '_blank');
+                card.addEventListener('click', (e) => {
+                    // If user clicked an actual link inside, let the anchor handle it
+                    if (e.target && (e.target.tagName === 'A' || e.target.closest('a'))) return;
+                    openUrl();
+                });
+                card.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        openUrl();
+                    }
+                });
+            });
 
             // Update meta tags
             const metaDesc = document.querySelector('meta[name="description"]');
