@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jasa otomasi absensi untuk PNS dan PPPK hanya 50rb/bulan. Solusi praktis dan terpercaya untuk kehadiran ASN. Hubungi kami di 08123456789">
-    <meta name="keywords" content="jasa absensi PNS, absensi PPPK, otomasi absensi ASN, absensi otomatis, jasa absensi pegawai negeri">
+    <meta name="description"
+        content="Jasa otomasi absensi untuk PNS dan PPPK hanya 50rb/bulan. Solusi praktis dan terpercaya untuk kehadiran ASN. Hubungi kami di 08123456789">
+    <meta name="keywords"
+        content="jasa absensi PNS, absensi PPPK, otomasi absensi ASN, absensi otomatis, jasa absensi pegawai negeri">
     <meta name="author" content="Represensi">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Represensi - Jasa Absensi PNS & PPPK Otomatis">
-    <meta property="og:description" content="Solusi otomasi absensi untuk PNS dan PPPK hanya 50rb/bulan. Praktis, aman, dan terpercaya.">
+    <meta property="og:description"
+        content="Solusi otomasi absensi untuk PNS dan PPPK hanya 50rb/bulan. Praktis, aman, dan terpercaya.">
     <meta property="og:url" content="https://yourusername.github.io/represensi">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Represensi - Jasa Absensi PNS & PPPK">
     <meta property="twitter:description" content="Jasa otomasi absensi untuk PNS dan PPPK hanya 50rb/bulan">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://yourusername.github.io/represensi">
-    
+
     <title>Represensi - Jasa Absensi PNS & PPPK Otomatis | Hanya 50rb/Bulan</title>
-    
+
     <style>
         * {
             margin: 0;
@@ -74,24 +77,22 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
         .nav-links {
             display: flex;
             gap: 2rem;
             list-style: none;
         }
-        
         .nav-links a {
             color: white;
             text-decoration: none;
             font-weight: 500;
             transition: opacity 0.3s;
         }
-        
+
         .nav-links a:hover {
             opacity: 0.8;
         }
-        
+
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
@@ -338,7 +339,7 @@
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -618,7 +619,8 @@
                 <div class="price-period" id="pricing-period"></div>
                 <ul id="pricing-features" style="list-style: none; margin: 2rem 0; line-height: 2;">
                 </ul>
-                <a href="#" id="pricing-cta-btn" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;"></a>
+                <a href="#" id="pricing-cta-btn" class="btn btn-primary"
+                    style="margin-top: 1rem; display: inline-block;"></a>
             </div>
         </section>
 
@@ -626,22 +628,22 @@
             <h2>Hubungi Kami</h2>
             <p id="contact-desc" style="max-width: 600px; margin: 0 auto 2rem; color: #666;"></p>
             <div class="contact-methods">
-                <!-- <div class="contact-card">
-                    <div class="contact-icon">📱</div>
-                    <h3>WhatsApp</h3>
-                    <a href="#" id="contact-wa"></a>
-                    <p style="margin-top: 0.5rem; color: #666;">Chat langsung dengan kami</p>
-                </div> -->
-                <div class="contact-card">
+                <div class="contact-card" data-config="shopeeUrl">
+                    <div class="contact-icon">🛒</div>
+                    <h3>Shopee</h3>
+                    <a id="contact-shopee" data-config="shopeeUrl" target="_blank" rel="noopener"></a>
+                    <p style="margin-top: 0.5rem; color: #666;">Beli langsung melalui SHOPEE</p>
+                </div>
+                <div class="contact-card" data-config="instagramUrl">
                     <div class="contact-icon">📷</div>
                     <h3>Instagram</h3>
-                    <a href="#" id="contact-ig" target="_blank"></a>
+                    <a id="contact-ig" data-config="instagramUrl" target="_blank" rel="noopener"></a>
                     <p style="margin-top: 0.5rem; color: #666;">Follow untuk update terbaru</p>
                 </div>
-                <div class="contact-card">
+                <div class="contact-card" data-config="tiktokUrl">
                     <div class="contact-icon">🎵</div>
                     <h3>TikTok</h3>
-                    <a href="#" id="contact-tiktok" target="_blank"></a>
+                    <a id="contact-tiktok" data-config="tiktokUrl" target="_blank" rel="noopener"></a>
                     <p style="margin-top: 0.5rem; color: #666;">Lihat konten menarik kami</p>
                 </div>
             </div>
@@ -665,10 +667,10 @@
             // Informasi Brand
             brandName: 'Represensi',
             brandIcon: '📋',
-            
+
             // Harga
             hargaBulanan: 50000, // dalam rupiah
-            
+
             // Kontak
             whatsapp: '6281234567890',
             whatsappDisplay: '08123456789',
@@ -676,23 +678,26 @@
             instagramUrl: 'https://instagram.com/represensi',
             tiktok: '@represensi',
             tiktokUrl: 'https://tiktok.com/@represensi',
-            
+            // Shopee (opsional)
+            shopeeUrl: 'https://s.shopee.co.id/9pYagoTEaQ',
+            shopeeText: 'Buka Shopee',
+
             // Konten Hero
             heroTitle: 'Jasa Absensi Otomatis untuk PNS & PPPK',
             heroSubtitle: 'Solusi praktis dan terpercaya untuk kehadiran ASN Anda. Tidak perlu repot lagi!',
             heroCTA: 'Hubungi Sekarang',
-            
+
             // Contact Section
             contactDesc: 'Siap membantu Anda 24/7. Jangan ragu untuk menghubungi kami melalui Instagram atau TikTok',
-            
+
             // Tagline
             taglineFooter: 'Jasa Absensi PNS & PPPK Terpercaya.',
             taglineSubFooter: 'Solusi Otomasi Absensi untuk Aparatur Sipil Negara',
-            
+
             // Meta SEO
             metaDescription: 'Jasa otomasi absensi untuk PNS dan PPPK hanya {harga}/bulan. Solusi praktis dan terpercaya untuk kehadiran ASN. Hubungi kami di {wa}',
             metaKeywords: 'jasa absensi PNS, absensi PPPK, otomasi absensi ASN, absensi otomatis, jasa absensi pegawai negari',
-            
+
             // Pricing Card
             pricingTitle: 'Paket Bulanan',
             pricingPeriod: '/bulan',
@@ -704,16 +709,15 @@
                 'Laporan Bulanan'
             ],
             pricingCTA: 'Daftar Sekarang',
-            
+
             // WhatsApp Message
             waMessage: 'Halo Represensi, saya tertarik dengan jasa absensi otomatis'
         };
-        
+
         // Fungsi format rupiah
         function formatRupiah(angka) {
             return 'Rp ' + angka.toLocaleString('id-ID');
         }
-        
         // Fungsi untuk replace placeholder
         function replacePlaceholders(text) {
             return text
@@ -721,69 +725,120 @@
                 .replace('{wa}', CONFIG.whatsappDisplay)
                 .replace('{brand}', CONFIG.brandName);
         }
-        
+
         // Update semua elemen saat halaman dimuat
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const hargaFormatted = formatRupiah(CONFIG.hargaBulanan);
             const waUrl = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(CONFIG.waMessage)}`;
-            
+
             // Update brand name & icon
             document.querySelectorAll('.logo').forEach(el => {
                 el.innerHTML = CONFIG.brandIcon + ' ' + CONFIG.brandName;
             });
-            
+
             // Update hero section
-            document.getElementById('hero-title').textContent = CONFIG.heroTitle;
-            document.getElementById('hero-subtitle').textContent = CONFIG.heroSubtitle;
-            document.getElementById('price-highlight').innerHTML = '💰 Hanya ' + hargaFormatted + '/Bulan';
-            document.getElementById('hero-cta').textContent = CONFIG.heroCTA;
-            
+            const heroTitleEl = document.getElementById('hero-title');
+            if (heroTitleEl) heroTitleEl.textContent = CONFIG.heroTitle;
+            const heroSubtitleEl = document.getElementById('hero-subtitle');
+            if (heroSubtitleEl) heroSubtitleEl.textContent = CONFIG.heroSubtitle;
+            const priceHighlightEl = document.getElementById('price-highlight');
+            if (priceHighlightEl) priceHighlightEl.innerHTML = '💰 Hanya ' + hargaFormatted + '/Bulan';
+            const heroCtaEl = document.getElementById('hero-cta');
+            if (heroCtaEl) {
+                heroCtaEl.textContent = CONFIG.heroCTA;
+                heroCtaEl.href = waUrl;
+            }
+
             // Update pricing section
-            document.getElementById('pricing-title').textContent = CONFIG.pricingTitle;
-            document.getElementById('pricing-price').textContent = hargaFormatted;
-            document.getElementById('pricing-period').textContent = CONFIG.pricingPeriod;
-            document.getElementById('pricing-features').innerHTML = CONFIG.pricingFeatures
-                .map(feature => `<li>✓ ${feature}</li>`)
-                .join('');
-            document.getElementById('pricing-cta-btn').textContent = CONFIG.pricingCTA;
-            document.getElementById('pricing-cta-btn').href = waUrl;
-            
-            // Update contact section
-            document.getElementById('contact-desc').textContent = CONFIG.contactDesc;
-            document.getElementById('contact-wa').textContent = CONFIG.whatsappDisplay;
-            document.getElementById('contact-wa').href = waUrl;
-            document.getElementById('contact-ig').textContent = CONFIG.instagram;
-            document.getElementById('contact-ig').href = CONFIG.instagramUrl;
-            document.getElementById('contact-tiktok').textContent = CONFIG.tiktok;
-            document.getElementById('contact-tiktok').href = CONFIG.tiktokUrl;
-            
+            const pricingTitleEl = document.getElementById('pricing-title');
+            if (pricingTitleEl) pricingTitleEl.textContent = CONFIG.pricingTitle;
+            const pricingPriceEl = document.getElementById('pricing-price');
+            if (pricingPriceEl) pricingPriceEl.textContent = hargaFormatted;
+            const pricingPeriodEl = document.getElementById('pricing-period');
+            if (pricingPeriodEl) pricingPeriodEl.textContent = CONFIG.pricingPeriod;
+            const pricingFeaturesEl = document.getElementById('pricing-features');
+            if (pricingFeaturesEl) {
+                pricingFeaturesEl.innerHTML = CONFIG.pricingFeatures
+                    .map(feature => `<li>✓ ${feature}</li>`)
+                    .join('');
+            }
+            const pricingBtnEl = document.getElementById('pricing-cta-btn');
+            if (pricingBtnEl) {
+                pricingBtnEl.textContent = CONFIG.pricingCTA;
+                pricingBtnEl.href = waUrl;
+            }
+
+            // Update contact section (safe checks)
+            const contactDescEl = document.getElementById('contact-desc');
+            if (contactDescEl) contactDescEl.textContent = CONFIG.contactDesc;
+
+            const contactShopeeEl = document.getElementById('contact-shopee');
+            if (contactShopeeEl) {
+                contactShopeeEl.textContent = CONFIG.shopeeText || 'Shopee';
+                contactShopeeEl.href = CONFIG.shopeeUrl || '#';
+            }
+
+            const contactIgEl = document.getElementById('contact-ig');
+            if (contactIgEl) {
+                contactIgEl.textContent = CONFIG.instagram;
+                contactIgEl.href = CONFIG.instagramUrl;
+            }
+
+            const contactTiktokEl = document.getElementById('contact-tiktok');
+            if (contactTiktokEl) {
+                contactTiktokEl.textContent = CONFIG.tiktok;
+                contactTiktokEl.href = CONFIG.tiktokUrl;
+            }
+
             // Update footer
-            document.getElementById('footer-main').innerHTML = `&copy; 2025 ${CONFIG.brandName}. ${CONFIG.taglineFooter}`;
-            document.getElementById('footer-sub').textContent = CONFIG.taglineSubFooter;
-            
+            const footerMainEl = document.getElementById('footer-main');
+            if (footerMainEl) footerMainEl.innerHTML = `&copy; 2025 ${CONFIG.brandName}. ${CONFIG.taglineFooter}`;
+            const footerSubEl = document.getElementById('footer-sub');
+            if (footerSubEl) footerSubEl.textContent = CONFIG.taglineSubFooter;
+
             // Update floating WhatsApp button
-            document.getElementById('wa-float').href = waUrl;
-            
+            const waFloatEl = document.getElementById('wa-float');
+            if (waFloatEl) waFloatEl.href = waUrl;
+
+            // Make entire contact-card clickable based on its `data-config` key
+            document.querySelectorAll('.contact-card[data-config]').forEach(card => {
+                const key = card.dataset.config;
+                const url = CONFIG[key];
+                if (!url) return;
+                card.style.cursor = 'pointer';
+                card.setAttribute('role', 'link');
+                card.setAttribute('tabindex', '0');
+                const openUrl = () => window.open(url, '_blank');
+                card.addEventListener('click', (e) => {
+                    // If user clicked an actual link inside, let the anchor handle it
+                    if (e.target && (e.target.tagName === 'A' || e.target.closest('a'))) return;
+                    openUrl();
+                });
+                card.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        openUrl();
+                    }
+                });
+            });
+
             // Update meta tags
             const metaDesc = document.querySelector('meta[name="description"]');
             if (metaDesc) {
                 metaDesc.content = replacePlaceholders(CONFIG.metaDescription);
             }
-            
             const metaKeywords = document.querySelector('meta[name="keywords"]');
             if (metaKeywords) {
                 metaKeywords.content = CONFIG.metaKeywords;
             }
-            
+
             // Update title
             document.title = `${CONFIG.brandName} - ${CONFIG.heroTitle} | Hanya ${hargaFormatted}/Bulan`;
-            
+
             // Update Open Graph
             const ogTitle = document.querySelector('meta[property="og:title"]');
             if (ogTitle) {
                 ogTitle.content = `${CONFIG.brandName} - ${CONFIG.heroTitle}`;
             }
-            
             const ogDesc = document.querySelector('meta[property="og:description"]');
             if (ogDesc) {
                 ogDesc.content = replacePlaceholders(CONFIG.metaDescription);
@@ -812,6 +867,23 @@
         ]
     }
     </script>
+
+    <script>
+        // Smooth scroll untuk anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
 
     <script>
         // Smooth scroll untuk anchor links
